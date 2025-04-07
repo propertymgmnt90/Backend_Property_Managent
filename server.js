@@ -48,6 +48,7 @@ app.use(cors({
     // 'https://buildestate.vercel.app',
     // 'https://real-estate-website-admin.onrender.com',
     // 'https://real-estate-website-backend-zfu7.onrender.com',
+    "*"
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD'], // Added HEAD
@@ -70,6 +71,8 @@ app.use('/api/news', newsrouter);
 app.use('/api/appointments', appointmentRouter);
 app.use('/api/admin', adminRouter);
 app.use('/api', propertyRoutes);
+console.log('--env', process.env);
+
 
 
 app.use((err, req, res, next) => {
@@ -141,6 +144,8 @@ const port = process.env.PORT || 4000;
 if (process.env.NODE_ENV !== 'test') {
   app.listen(port, '0.0.0.0', () => {
     console.log(`Server running on port ${port}`);
+console.log('--env', process.env);
+
   });
 }
 
