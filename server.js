@@ -44,11 +44,12 @@ app.use(cors({
     'http://localhost:4000',
     'http://localhost:5174',
     'http://localhost:5173',
+    'https://backend-property-managent.onrender.com',
     // 'https://e2f2-110-226-127-135.ngrok-free.app/',
     // 'https://buildestate.vercel.app',
     // 'https://real-estate-website-admin.onrender.com',
     // 'https://real-estate-website-backend-zfu7.onrender.com',
-    'https://admin-property-managent.vercel.app/login'
+    'https://admin-property-managent.vercel.app'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD'], // Added HEAD
