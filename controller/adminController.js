@@ -159,6 +159,25 @@ const getViewsData = async () => {
   }
 };
 
+
+//Get All Users
+
+export const getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find().select("-password"); // Exclude password for security
+    res.json({
+      success: true,
+      users,
+    });
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    res.status(500).json({
+      success: false,
+      message: "Error fetching users",
+    });
+  }
+};
+
 // Add these new controller functions
 export const getAllAppointments = async (req, res) => {
   try {
