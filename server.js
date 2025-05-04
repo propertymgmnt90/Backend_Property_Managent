@@ -511,7 +511,7 @@ app.get("/", (req, res) => {
       </head>
       <body>
         <div class="dashboard">
-          <h1>BuildEstate API Monitor</h1>
+          <h1>BuildEstate API Monitor 5/4/25 6:53</h1>
           <div class="status-box">
             <span class="status pulse">Operational</span>
             <span class="time">${new Date().toLocaleString()}</span>
