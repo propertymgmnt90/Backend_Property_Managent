@@ -344,21 +344,21 @@ export const verifyLoginOTP = async (req, res) => {
 
 
 
-const adminlogin = async (req, res) => {
-  try {
-    const { email, password } = req.body;
+// const adminlogin = async (req, res) => {
+//   try {
+//     const { email, password } = req.body;
 
-    if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
-      const token = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: '1h' });
-      return res.json({ token, success: true });
-    } else {
-      return res.status(400).json({ message: "Invalid credentials", success: false });
-    }
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({ message: "Server error", success: false });
-  }
-};
+//     if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
+//       const token = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: '1h' });
+//       return res.json({ token, success: true });
+//     } else {
+//       return res.status(400).json({ message: "Invalid credentials", success: false });
+//     }
+//   } catch (error) {
+//     console.error(error);
+//     return res.status(500).json({ message: "Server error", success: false });
+//   }
+// };
 
 // Admin login
 export const adminLogin = async (req, res) => {
